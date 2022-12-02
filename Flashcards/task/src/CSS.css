@@ -1,0 +1,66 @@
+#content {
+    background-image: url("\world.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1 {
+    font-family: arial, sans-serif;
+    background-color: blue;
+    color: white;
+    border-radius: 30px;
+}
+
+p {
+    font-family: arial, sans-serif;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    background: lightblue;
+    opacity: 0.5;
+    justify-content: center;
+
+}
+.flex-item {
+    min-width: 150px;
+    min-height: 150px;
+    margin: 20px;
+    background: white;
+    border-radius: 30px;
+    position: relative;
+}
+.front, .back {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    position: absolute;
+
+}
+
+.front {
+    background-color: aqua;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.back {
+    background: coral;
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+.card {
+    min-width: 150px;
+    min-height: 150px;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+
+}
+.card:hover{
+    transform: rotateY(180deg);
+}
